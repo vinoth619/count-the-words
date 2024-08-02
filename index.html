@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>[no-11]count the numper of words in string</h3>
+    <input type="text" id="inpu">
+
+    <button onclick="find()">click</button>
+    <h3 id="head"></h3>
+    <script>
+        
+        function find(){
+            var hel=document.getElementById("inpu")
+                 hel=hel.value
+                 ab=hel.value;
+               var count=1;
+          if(hel==''){
+           alert("enter the value")
+           return false
+         }
+         count=1;
+         for(let i=0; i<hel.length;i++){
+            if(hel[i]==' '){
+                count++;
+            if(hel[i]==' '&&hel[i+1]==' '){
+                count--;
+            }
+            }
+           
+         }
+       document.getElementById("head").innerHTML=`this string contains${count} words`
+          
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
